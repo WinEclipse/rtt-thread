@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.rtthread.wizard.feature_1.0.0.qualifier.jar" id="org.rtthread.wizard.feature" version="1.0.0.qualifier" os="win32" ws="win32" nl="en,zh,zh_CN" arch="x86"/>
+   <category-def name="RTTHREAD_WIZARD" label="RT-Thread Project Wizard">
+      <description>
+         This is a RT-Thread Project Wizard plugin for Eclipse.
+      </description>
+   </category-def>
+</site>

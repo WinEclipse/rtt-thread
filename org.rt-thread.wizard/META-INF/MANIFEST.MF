@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RT-Thread Wizard
+Bundle-SymbolicName: org.rt-thread.wizard;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.rtthread.wizard.RDTPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide,
+ org.eclipse.cdt.ui,
+ org.eclipse.core.resources,
+ org.eclipse.cdt.core,
+ org.eclipse.core.filesystem,
+ org.eclipse.ui.navigator,
+ org.eclipse.cdt.managedbuilder.core
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: RDT

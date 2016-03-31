@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            canFinishEarly="false"
+            category="org.eclipse.cdt.ui.newCWizards"
+            class="org.rtthread.wizard.RDTProjectWizard"
+            finalPerspective="org.eclipse.cdt.ui.CPerspective"
+            hasPages="true"
+            icon="icons/elcl16/newmngc_app.gif"
+            id="org.retthread.wizard.wizard1"
+            name="RT-Thread Project"
+            project="true">
+         <description>
+            Create a new RT-Thread project
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <commonWizard
+            associatedExtensionId="org.eclipse.cdt.ui.navigator.content"
+            menuGroupId="org.eclipse.cdt.ui.newProject"
+            type="new"
+            wizardId="org.retthread.wizard.wizard1">
+         <enablement></enablement>
+      </commonWizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.rtthread.wizard.preferences.RTTPreferencePage"
+            id="org.rtthread.wizard.page1"
+            name="RT-Thread">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="org.rtthread.wizard.properties.ProjectPropertyPage"
+            id="org.rtthread.wizard.properties.ProjectPropertyPage"
+            name="RT-Thread"
+            objectClass="org.eclipse.core.resources.IProject">
+         <filter
+               name="nature"
+               value="org.eclipse.cdt.core.cnature">
+         </filter>
+      </page>
+   </extension>
+<!--
+ <extension
+         point="org.eclipse.cdt.core.templates">
+      <template
+            filterPattern=".*gcc"
+            id="org.rt-thread.wizard.template.X1000"
+            location="$nl$/templates/projecttemplates/X1000_Project/template.xml"
+            projectType="org.eclipse.cdt.build.core.buildArtefactType.exe">
+      </template>
+   </extension>
+   -->
+</plugin>
